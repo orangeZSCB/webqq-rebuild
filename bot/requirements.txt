@@ -1,0 +1,5 @@
+nonebot2>=2.3.0
+nonebot-adapter-onebot>=2.4.0
+fastapi>=0.100.0
+websockets>=14.0
+uvicorn[standard]>=0.23.0

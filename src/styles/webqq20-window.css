@@ -1,0 +1,92 @@
+.window {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid color-mix(in srgb, white 50%, transparent);
+  border-radius: 14px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--glass-strong) 96%, transparent), color-mix(in srgb, var(--glass-white) 88%, transparent));
+  box-shadow: 0 12px 48px color-mix(in srgb, var(--color-primary) 32%, transparent), inset 0 1px 0 color-mix(in srgb, white 95%, transparent);
+  overflow: hidden;
+  user-select: none;
+  backdrop-filter: blur(8px);
+}
+
+.window--inactive {
+  opacity: 0.9;
+}
+
+.window__titlebar {
+  height: 32px;
+  background: linear-gradient(180deg, color-mix(in srgb, white 92%, transparent), color-mix(in srgb, var(--color-accent) 14%, white));
+  border-bottom: 1px solid color-mix(in srgb, var(--color-primary) 18%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  cursor: move;
+}
+
+.window__title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-primary);
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.window__controls {
+  display: flex;
+  gap: 6px;
+}
+
+.window__control-btn {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 22%, transparent);
+  background: linear-gradient(180deg, #ffffff, color-mix(in srgb, var(--color-accent) 20%, white));
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  color: var(--color-text-secondary);
+  transition: transform 80ms ease;
+}
+
+.window__control-btn:hover {
+  transform: scale(1.08);
+}
+
+.window__control-btn:active {
+  transform: scale(0.96);
+}
+
+.window__body {
+  flex: 1;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--glass-strong) 78%, transparent);
+  position: relative;
+}
+
+.window__resize-handle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+  cursor: nwse-resize;
+  z-index: 10;
+}
+
+.window__resize-handle::after {
+  content: '';
+  position: absolute;
+  right: 2px;
+  bottom: 2px;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid color-mix(in srgb, var(--color-primary) 28%, transparent);
+  border-bottom: 2px solid color-mix(in srgb, var(--color-primary) 28%, transparent);
+}

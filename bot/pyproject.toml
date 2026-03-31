@@ -1,0 +1,13 @@
+[project]
+name = "webqq-bot"
+version = "0.1.0"
+description = "WebQQ Bot powered by NoneBot2"
+readme = "README.md"
+requires-python = ">=3.9"
+
+[tool.nonebot]
+adapters = [
+    { name = "OneBot V11", module_name = "nonebot.adapters.onebot.v11" }
+]
+plugins = ["plugins"]
+plugin_dirs = ["plugins"]

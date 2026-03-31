@@ -1,0 +1,43 @@
+:root {
+  color: var(--color-text, #1f2d3d);
+  background: var(--shell-bg, #6ba6d8);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --shell-min-width: 1024px;
+  --shell-min-height: 768px;
+  --topbar-height: 78px;
+  --toolbar-height: 84px;
+  --sidebar-width: 224px;
+  --toggle-width: 28px;
+
+  --shell-bg: #6ba6d8;
+  --glass-white: rgba(255, 255, 255, 0.7);
+  --glass-strong: rgba(255, 255, 255, 0.88);
+  --line-soft: rgba(255, 255, 255, 0.32);
+  --line-strong: rgba(34, 84, 136, 0.28);
+  --shadow-shell: 0 18px 60px rgba(16, 52, 95, 0.28);
+  --color-primary: #2d5f8f;
+  --color-primary-light: #4a9de8;
+  --color-primary-hover: #5fb3f6;
+  --color-text: #1f2d3d;
+  --color-text-secondary: #3a648f;
+  --color-text-muted: rgba(45, 95, 143, 0.58);
+  --color-accent: #5fb3f6;
+}
+
+html,
+body {
+  min-width: var(--shell-min-width);
+  min-height: var(--shell-min-height);
+}
+
+body {
+  overflow: hidden;
+}
+
+#app {
+  min-height: 100vh;
+}
